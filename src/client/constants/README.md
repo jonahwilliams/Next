@@ -8,7 +8,7 @@ export const ADD_TODO = 'ADD_TODO';
 export const COMPLETE_TODO = 'COMPLETE_TODO';
 ```
 
-#3 Naming ActionTypes
+# Naming ActionTypes
 actionTypes are simply the type field of a FSA (Flux Standard Action).  These
 can contain error information too, so a pair of actionTypes like the following
 is unnecessary.
@@ -39,7 +39,7 @@ export function addTodo(description) {
 
 Of course this means that our reducer must be aware of the error field.  
 
-#3 Naming Collisions
+# Naming Collisions
 Suppose we already have an action called `ENTER_DATA` somewhere else in our
 app and we find ourselves creating a different action called `ENTER_DATA`.  
 Defining different behavior on different reducers will not magically distinguish
@@ -60,10 +60,12 @@ solutions to the naming problem:
   unique.
     ```javascript
     // In file /constants/todoActions.js
-    export const ENTER_DATA = Symbol.of('ENTER_DATA_TODO');
-    //...
+    export const ENTER_DATA = Symbol('ENTER_DATA_TODO');
+    ```
+    ...
+    ```javascript
     // In the file /constants/formActions.js
-    export const ENTER_DATA = Symbol.of('ENTER_DATA_FORM');
+    export const ENTER_DATA = Symbol('ENTER_DATA_FORM');
     ```
   While this lets us use the same variable name, it also obscures the location
   of the action a bit and requires us to `import .. as something from ..` if

@@ -1,0 +1,35 @@
+{
+  "name": "Next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^1.1.2",
+    "ramda": "^0.19.1",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-redux": "^4.4.0",
+    "react-router": "^2.0.0",
+    "redux": "^3.3.1",
+    "redux-thunk": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "babel-preset-react": "^6.5.0",
+    "eslint": "^2.0.0",
+    "eslint-plugin-react": "^4.1.0",
+    "rollup": "^0.25.4",
+    "rollup-plugin-babel": "^2.4.0",
+    "rollup-plugin-commonjs": "^2.2.1",
+    "rollup-plugin-json": "^2.0.0",
+    "rollup-plugin-node-resolve": "^1.4.0",
+    "rollup-plugin-uglify": "^0.2.0"
+  }
+}

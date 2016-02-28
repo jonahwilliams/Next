@@ -20,7 +20,7 @@ actions for us.
 
 ```javascript
   import { ENTER_DATA } from 'constants/actionTypes';
-  export function enterDate(field, value) {
+  export function enterData(field, value) {
     return {
       type: ENTER_DATA,
       payload: { field, value },
@@ -29,13 +29,12 @@ actions for us.
   }
 ```
 3. A reducer - which implements the transformations that the actions describe.
-consists of an initial state, and a switch on the action types.  typically,
-they are named '\_App'.
-
+consists of an initial state, and a switch on the action types.
 ```javascript
+
   import { ENTER_DATA } from 'constants/actionTypes';
 
-  export function formApp(state = { date: null, name: null, valid: false}, action) {
+  export function form(state = { date: null, name: null, valid: false}, action) {
     switch(action.type){
       case ENTER_DATA: {
           const { field, value } = action.payload;
